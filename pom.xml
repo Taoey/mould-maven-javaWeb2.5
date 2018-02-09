@@ -1,20 +1,26 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>mavenee</groupId>
-  <artifactId>mould-javaweb2.5</artifactId>
+  <groupId>StudentCourseSystem</groupId>
+  <artifactId>StudentCourseSystem</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>mould-javaweb2.5 Maven Webapp</name>
+  <name>StudentCourseSystem Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
+  <properties>
+    <!-- springframe 版本控制 -->
+    <spring.version>4.3.5.RELEASE</spring.version>  
+  </properties>
+  
   <dependencies>
-    <!-- Junit -->
-	<dependency>
-	  <groupId>junit</groupId>
-	  <artifactId>junit</artifactId>
-	  <version>4.12</version>
-	</dependency>
-    <!-- javaEE -->
+  <!-- Junit -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+    </dependency>
+    <!-- javaEE begin-->
     <dependency>
         <groupId>javax</groupId>
         <artifactId>javaee-api</artifactId>
@@ -25,10 +31,102 @@
         <artifactId>javaee-web-api</artifactId>
         <version>7.0</version>
     </dependency>
+    <!-- javaEE end -->
+    <!-- spring begin -->
+    <!-- spring 核心功能包  
+        spring-aop-4.3.0.RELEASE.jar  
+        spring-beans-4.3.0.RELEASE.jar  
+        spring-context-4.3.0.RELEASE.jar  
+        spring-core-4.3.0.RELEASE.jar  
+        spring-expression-4.3.0.RELEASE.jar  
+        commons-logging-1.2.jar  
+    -->  
+    <dependency>  
+          <groupId>org.springframework</groupId>  
+          <artifactId>spring-context</artifactId>  
+          <version>${spring.version}</version>  
+    </dependency>  
+    <dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-aspects</artifactId>
+	  <version>${spring.version}</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-context-support</artifactId>
+	  <version>${spring.version}</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-instrument</artifactId>
+	  <version>${spring.version}</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-instrument-tomcat</artifactId>
+	  <version>${spring.version}</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-jdbc</artifactId>
+	  <version>${spring.version}</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-jms</artifactId>
+	  <version>${spring.version}</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-messaging</artifactId>
+	  <version>${spring.version}</version>
+	</dependency>	
+	<dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-orm</artifactId>
+	  <version>${spring.version}</version>
+	</dependency>	
+	<dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-oxm</artifactId>
+	  <version>${spring.version}</version>
+	</dependency>	
+	<dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-test</artifactId>
+	  <version>${spring.version}</version>
+	</dependency>		
+	<dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-tx</artifactId>
+	  <version>${spring.version}</version>
+	</dependency>	
+	<dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-web</artifactId>
+	  <version>${spring.version}</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-webmvc</artifactId>
+	  <version>${spring.version}</version>
+	</dependency>	
+	<dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-webmvc-portlet</artifactId>
+	  <version>${spring.version}</version>
+	</dependency>	
+	<dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-websocket</artifactId>
+	  <version>${spring.version}</version>
+	</dependency>	
+	
+			
   </dependencies>
   <build>
-    <finalName>mould-javaweb2.5</finalName>
-       	<plugins>  
+    <finalName>StudentCourseSystem</finalName>
+    	<plugins>  
 			<plugin>  
 			<groupId>org.apache.maven.plugins</groupId>  
 			<artifactId>maven-compiler-plugin</artifactId>  
@@ -36,7 +134,7 @@
 			<source>1.8</source>  
 			<target>1.8</target>  
 			</configuration>  
-		</plugin>  
-	</plugins> 
+			</plugin>  
+		</plugins>   
   </build>
 </project>
